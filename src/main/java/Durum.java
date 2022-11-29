@@ -13,18 +13,10 @@ public class Durum extends MenuItem{
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getMeat() {
         return meat;
     }
 
-    public void setMeat(String meat) {
-        this.meat = meat;
-    }
 
     @Override
     public String toString() {
