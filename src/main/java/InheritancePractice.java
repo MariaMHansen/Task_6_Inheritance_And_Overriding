@@ -40,12 +40,12 @@ import java.util.Arrays;
 
 public class InheritancePractice {
     public static void main(String[] args) {
-        InheritancePractice op = new InheritancePractice();
-        System.out.println("Task 1: " ); op.getMenuItemInfo();
-        System.out.println("Task 2: " ); op.makePizza();
-        System.out.println("Task 3: " ); op.makeDurum();
-        System.out.println("Task 4: " ); op.createOrder();
-        System.out.println("Task 5: " ); op.createPizzeriaManager();
+        //InheritancePractice op = new InheritancePractice();
+       // System.out.println("Task 1: " ); op.getMenuItemInfo();
+       //System.out.println("Task 2: " ); op.makePizza();
+       // System.out.println("Task 3: " ); op.makeDurum();
+       // System.out.println("Task 4: " ); op.createOrder();
+       // System.out.println("Task 5: " ); op.createPizzeriaManager();
     }
     /**
      * Task 1
@@ -67,11 +67,14 @@ public class InheritancePractice {
      * Difficulty: 2
      */
 
+    /*
     public void getMenuItemInfo(){
         MenuItem menuItem1 = new MenuItem("default menu item", 50.0);
         System.out.println(menuItem1);
 
     }
+
+     */
 
     /**
      * Task 2
@@ -93,11 +96,13 @@ public class InheritancePractice {
      * Difficulty: 2
      */
 
-
+/*
     public void makePizza(){
         Pizza hawaiiPizza = new Pizza("Hawaii");
         System.out.println(hawaiiPizza);
     }
+
+ */
     /**
      * Task 3
      * The second type of MenuItems the pizzeria will produce is Durum.
@@ -115,12 +120,14 @@ public class InheritancePractice {
      * New skills: overriding methods, super keyword
      * Difficulty: 3
      */
-
+/*
     public void makeDurum(){
         Durum classicDurum = new Durum("classic", "kebab");
         System.out.println(classicDurum);
 
     }
+
+ */
     /**
      * Task 4
      * Create an Order class, with one attribute, which is
@@ -136,7 +143,7 @@ public class InheritancePractice {
      * New skills: storing children items in parent class array
      * Difficulty: 4
      */
-
+/*
     public void createOrder(){
         Order order = new Order();
         Pizza standardPizza = new Pizza("Margherita");
@@ -146,7 +153,7 @@ public class InheritancePractice {
         System.out.println("Order details: ");
         order.printMenuItems();
     }
-
+ */
     /**
      * Task 5
      * Create a PizzeriaManager class, with no attributes and an empty constructor.
@@ -158,7 +165,7 @@ public class InheritancePractice {
      * New skills: accessing class attributes through inheritance
      * Difficulty: 2
      */
-
+/*
     public void createPizzeriaManager(){
         PizzeriaManager pizzeriaManager = new PizzeriaManager();
         Order order = new Order();
@@ -168,8 +175,9 @@ public class InheritancePractice {
         order.addMenuItem(classicDurum);
         pizzeriaManager.calculateTotalPrice(order);
         pizzeriaManager.printReceipt(order);
-
     }
+
+ */
 }
 /**
  * @author Maria Hansen
