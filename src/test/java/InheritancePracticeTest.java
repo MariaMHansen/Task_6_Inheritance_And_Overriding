@@ -9,9 +9,6 @@ import java.lang.reflect.Method;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
-// Overloading is ....
-//
-
 class InheritancePracticeTest {
     InheritancePracticeTest() {
     }
