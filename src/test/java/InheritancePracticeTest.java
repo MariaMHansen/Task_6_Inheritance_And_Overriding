@@ -205,15 +205,33 @@ class InheritancePracticeTest {
     @Test
     void pizzaClassTest() throws ClassNotFoundException, NoSuchMethodException, NoSuchFieldException, InvocationTargetException, InstantiationException, IllegalAccessException {
         // Checking if Pizza class exists
-        if (!classExists("Pizza")) {
+        if (!classExists("Pizza")||!classExists("MenuItem")) {
             fail("\n" +
                     "-------------------------------------------------------------------------\n" +
                     "AUTO-FEEDBACK:\n" +
                     "Step 2:\n" +
-                    " You need to create the Pizza class to pass Test 2 \n" +
+                    " You need to create the Pizza and MenuItem class to pass Test 2 \n" +
                     "-------------------------------------------------------------------------\n"
             );
         }
+        // Checking if Pizza class extends MenuItem
+        Class<?> pClass = Class.forName("Pizza");
+        Class<?> mClass = Class.forName("MenuItem");
+        if (!mClass.isAssignableFrom(pClass)) {
+            fail("\n" +
+                    "-------------------------------------------------------------------------\n" +
+                    "Step 2:\n" +
+                    " Pizza has to be a child class to MenuItem to pass Test 2 \n" +
+                    "          Try using extends keyword in the child class \n" +
+                    "          If you are having problems with the constructor \n" +
+                    "          Try super keyword, it MUST be in the first line of constructor! \n" +
+                    "          You can find examples of inheritance here: \n" +
+                    "          \"Introduction to Java Programming and Data Structures book\"\n" +
+                    "          11.2 Superclasses and Subclasses \n" +
+                    "-------------------------------------------------------------------------\n"
+            );
+        }
+
         // Checking if Pizza name attribute exists
         if (!fieldExists("Pizza", "name")) {
             fail("\n" +
@@ -264,7 +282,9 @@ class InheritancePracticeTest {
                     "          9.9 Data Field Encapsulation \n" +
                     "-------------------------------------------------------------------------\n"
             );
-        }else {
+        }
+
+        else {
             // Creating a new Pizza object and checking if it has a String attribute name
             Object testPizzaObject = createPizzaTestObject();
             Field nameField = getFieldFromClass("Pizza", testPizzaObject, "name");
@@ -324,6 +344,7 @@ class InheritancePracticeTest {
             // checking if fields are private
             Assertions.assertEquals(true,   pizzaFieldIsPrivate("name"));
             Assertions.assertEquals(true,   pizzaFieldIsPrivate("ingredients"));
+
         }
     }
 
@@ -332,15 +353,33 @@ class InheritancePracticeTest {
     @Test
     void durumClassTest() throws ClassNotFoundException, NoSuchMethodException, NoSuchFieldException, InvocationTargetException, InstantiationException, IllegalAccessException {
         // Checking if Pizza class exists
-        if (!classExists("Durum")) {
+        if (!classExists("Durum")||!classExists("MenuItem")) {
             fail("\n" +
                     "-------------------------------------------------------------------------\n" +
                     "AUTO-FEEDBACK:\n" +
                     "Step 3:\n" +
-                    " You need to create the Durum class to pass Test 3 \n" +
+                    " You need to create the Durum and MenuItem classes to pass Test 3 \n" +
                     "-------------------------------------------------------------------------\n"
             );
         }
+        // Checking if Durum class extends MenuItem
+        Class<?> dClass = Class.forName("Durum");
+        Class<?> mClass = Class.forName("MenuItem");
+        if (!mClass.isAssignableFrom(dClass)) {
+            fail("\n" +
+                    "-------------------------------------------------------------------------\n" +
+                    "Step 3:\n" +
+                    " Durum has to be a child class to MenuItem to pass Test 3 \n" +
+                    "          Try using extends keyword in the child class \n" +
+                    "          If you are having problems with the constructor \n" +
+                    "          Try super keyword, it MUST be in the first line of constructor! \n" +
+                    "          You can find examples of inheritance here: \n" +
+                    "          \"Introduction to Java Programming and Data Structures book\"\n" +
+                    "          11.2 Superclasses and Subclasses \n" +
+                    "-------------------------------------------------------------------------\n"
+            );
+        }
+
         // Checking if Durum name attribute exists
         if (!fieldExists("Pizza", "name")) {
             fail("\n" +

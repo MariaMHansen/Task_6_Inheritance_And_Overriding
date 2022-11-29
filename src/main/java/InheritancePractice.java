@@ -46,9 +46,6 @@ public class InheritancePractice {
         System.out.println("Task 3: " ); op.makeDurum();
         System.out.println("Task 4: " ); op.createOrder();
         System.out.println("Task 5: " ); op.createPizzeriaManager();
-
-
-
     }
     /**
      * Task 1
@@ -90,6 +87,7 @@ public class InheritancePractice {
      * All pizzas cost 87.0. Pizza class needs to send "pizza" type to the MenuItem superclass.
      * You also need to create a toStringMethod, which Overrides the toStringMethod of the super class.
      * You can find examples of overriding toString method here : 11.4 Overriding Methods
+     * Tip! Super keyword MUST always be in the first line of the constructor!
      * Points: 2
      * New skills: overriding methods, super keyword
      * Difficulty: 2
